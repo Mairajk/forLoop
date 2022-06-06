@@ -9,21 +9,46 @@
 <body>
 
 
+    <form action="" onclick = " table() ; return false " >
+        <label for=""> Enter a number for table : </label><br>
+        <input type="number" placeholder=" Enter a number for table " id="nFt" > <br> <br>
+        <label for=""> Enter number of Multiples : </label><br>
+        <input type="number" placeholder="Enter number of Multiples " id="nOm"> <br><br>
+        <button type="submit"> Calculate </button>
+    </form>
+
     <h1 id="loop"></h1>
 
 
 
     <script>
 
-        let loop =  document.querySelector(`#loop`) ; 
+        function table() {
 
-        for (let i = 0 ; i < 10 ; i++) {
+            let nFt = document.querySelector("#nFt").value ;
+            let nOm = document.querySelector("#nOm").value ; 
+
+
+            for (let i = 0 ;     i < nOm ;     i++) {
+                
+              console.log();
+                let loop = document.querySelector("#loop") ;
+                loop.innerHTML  +=  ` ${nFt} x ${i + 1} = ${nFt * ( i + 1 )} <br>  `  
+            }
+
+
             
-            console.log(i);
-
-            loop.innerHTML +=  i + "<br>" ;
-  
         }
+
+        // let loop =  document.querySelector(`#loop`) ; 
+
+        // for (let i = 0 ; i < 10 ; i++) {
+            
+        //     console.log(i);
+
+        //     loop.innerHTML  +=  i + "<br>" ;
+  
+        // }
 
     </script>
     
