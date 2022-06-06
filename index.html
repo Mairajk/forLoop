@@ -5,19 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="table.css">
 </head>
 <body>
 
+    <h1 id="head"> Table Generator </h1>
+
 
     <form action="" onclick = " table() ; return false " >
-        <label for=""> Enter a number for table : </label><br>
-        <input type="number" placeholder=" Enter a number for table " id="nFt" > <br> <br>
-        <label for=""> Enter number of Multiples : </label><br>
+        <label for=""> Enter a number for table : </label>
+        <input type="number" placeholder=" Enter a number for table " id="nFt" autofocus> <br> <br>
+        <label for=""> Enter number of Multiples : </label>
         <input type="number" placeholder="Enter number of Multiples " id="nOm"> <br><br>
         <button type="submit"> Calculate </button>
     </form>
 
-    <h1 id="loop"></h1>
+    <h3 id="loop"></h3>
 
 
 
@@ -26,18 +29,19 @@
         function table() {
 
             let nFt = document.querySelector("#nFt").value ;
-            let nOm = document.querySelector("#nOm").value ; 
+            let nOm = document.querySelector("#nOm").value ;
+             loop.innerHTML = `` ; 
 
 
             for (let i = 0 ;     i < nOm ;     i++) {
                 
               console.log();
+
                 let loop = document.querySelector("#loop") ;
+
                 loop.innerHTML  +=  ` ${nFt} x ${i + 1} = ${nFt * ( i + 1 )} <br>  `  
             }
-
-
-            
+           
         }
 
         // let loop =  document.querySelector(`#loop`) ; 
